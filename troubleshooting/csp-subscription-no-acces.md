@@ -68,7 +68,7 @@ Microsoft Entra ID
 ```
 
 This grants the Global Administrator temporary elevated permissions at tenant root scope.
-
+![Access Management for Azure Resources](images/csp-subscription-no-access/access-management-for-azure-resources.png)
 ### Step 2 – Sign Out and Sign In Again
 
 ```text
