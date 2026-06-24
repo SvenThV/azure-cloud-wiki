@@ -1,118 +1,179 @@
-CSP Subscription – Customer Has No Permissions
-Problem
+# CSP Subscription – Customer Has No Permissions
+
+## Problem
 
 After provisioning a new Azure CSP subscription, the customer can see the subscription but cannot manage resources.
 
-Symptoms
-Cannot create Resource Groups
-Cannot create Storage Accounts
-Cannot assign Azure RBAC roles
-IAM shows limited or no permissions
+---
 
-Example error:
+## Symptoms
 
+The customer is unable to:
+
+* Create Resource Groups
+* Create Storage Accounts
+* Assign Azure RBAC roles
+* View or manage permissions in IAM
+
+### Example Error
+
+```text
 You do not have permissions to create resource groups under subscription ...
-Root Cause
+```
+
+or
+
+```text
+You do not have permission to view role assignments.
+```
+
+---
+
+## Root Cause
 
 Microsoft Entra roles and Azure RBAC roles are separate permission systems.
 
 Being assigned the role:
 
+```text
 Global Administrator
+```
 
-does not automatically grant permissions on Azure subscriptions.
+does **not automatically grant permissions** on Azure subscriptions.
 
-Example:
+### Example
 
+```text
 Microsoft Entra ID
 └─ Global Administrator
 
 Azure Subscription
 └─ Owner / Contributor / Reader
-Resolution
-Enable Access Management for Azure Resources
+```
+
+---
+
+## Resolution
+
+### Step 1 – Enable Access Management for Azure Resources
+
+Navigate to:
+
+```text
 Microsoft Entra ID
 → Properties
 → Access management for Azure resources
 → Yes
 → Save
+```
 
 This grants the Global Administrator temporary elevated permissions at tenant root scope.
 
-Sign out and sign in again
+### Step 2 – Sign Out and Sign In Again
+
+```text
 Logout
 → Login
+```
 
 Wait a few minutes if necessary.
 
-Assign Subscription Permissions
+### Step 3 – Assign Subscription Permissions
+
+Navigate to:
+
+```text
 Subscriptions
-→ Subscription
+→ <Subscription>
 → Access Control (IAM)
 → Add Role Assignment
+```
 
-Assign:
+Assign one of the following roles:
 
+```text
 Owner
+```
 
 or
 
+```text
 Contributor
+```
 
 depending on customer requirements.
 
-Verification
+---
 
-Check:
+## Verification
 
+Navigate to:
+
+```text
 Subscription
 → My Permissions
+```
 
 Expected result:
 
+```text
 Role: Owner
 Scope: Subscription
+```
 
-Customer should be able to:
+The customer should now be able to:
 
-Create Resource Groups
-Create Azure resources
-View IAM assignments
-CSP Specific Notes
+* Create Resource Groups
+* Create Azure resources
+* View IAM role assignments
+* Assign RBAC permissions (Owner only)
+
+---
+
+## CSP Specific Notes
 
 For newly created CSP subscriptions, ownership is often assigned only to the CSP partner.
 
-Example:
+### Example
 
+```text
 Foreign Principal for <Partner Name>
 Role: Owner
+```
 
 In this scenario either:
 
-Customer assigns themselves Owner permissions using the procedure above
-CSP partner assigns Owner or Contributor permissions
-Screenshots
-Access Management for Azure Resources
+* The customer assigns themselves **Owner** permissions using the procedure above
+* The CSP partner assigns the customer **Owner** or **Contributor** permissions
 
-[screenshot]
+---
 
-Missing Subscription Permissions
+## Screenshots
 
-[screenshot]
+### Access Management for Azure Resources
 
-Successful Owner Assignment
+![Access Management](images/csp-subscription-no-access/access-management-for-azure-resources.png)
 
-[screenshot]
+### Missing Subscription Permissions
 
-Lessons Learned
+![Missing Permissions](images/csp-subscription-no-access/iam-no-permissions.png)
+
+### Successful Owner Assignment
+
+![Owner Assignment](images/csp-subscription-no-access/owner-assignment-successful.png)
+
+---
+
+## Lessons Learned
 
 Always verify customer permissions immediately after CSP subscription provisioning.
 
-Checklist:
+### Checklist
 
-Customer has Owner permissions
-Customer can create a Resource Group
-Customer can create a Storage Account
-Customer can access IAM
+* [ ] Customer has Owner permissions
+* [ ] Customer can create a Resource Group
+* [ ] Customer can create a Storage Account
+* [ ] Customer can access IAM
+* [ ] Customer can assign RBAC roles (if required)
 
 Perform these checks before starting implementation activities.
