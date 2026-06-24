@@ -154,10 +154,10 @@ Always verify customer permissions immediately after CSP subscription provisioni
 
 ### Checklist
 
-* [ ] Customer has Owner permissions
-* [ ] Customer can create a Resource Group
-* [ ] Customer can create a Storage Account
-* [ ] Customer can access IAM
-* [ ] Customer can assign RBAC roles (if required)
+- [ ] Customer has the required Azure RBAC role (Owner or Contributor)
+- [ ] Customer can access the subscription
+- [ ] Customer can view IAM permissions
+- [ ] Customer can create Azure resources within the subscription
+- [ ] Customer can assign RBAC roles (if required)
 
 Perform these checks before starting implementation activities.
