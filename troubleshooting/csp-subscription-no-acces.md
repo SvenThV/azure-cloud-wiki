@@ -104,7 +104,7 @@ Contributor
 depending on customer requirements.
 
 ---
-
+![Owner Role Assignment](images/csp-subscription-no-access/owner-role-assignment.png)
 ## Verification
 
 Navigate to:
