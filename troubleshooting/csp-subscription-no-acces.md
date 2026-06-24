@@ -148,22 +148,6 @@ In this scenario either:
 
 ---
 
-## Screenshots
-
-### Access Management for Azure Resources
-
-![Access Management](images/csp-subscription-no-access/access-management-for-azure-resources.png)
-
-### Missing Subscription Permissions
-
-![Missing Permissions](images/csp-subscription-no-access/iam-no-permissions.png)
-
-### Successful Owner Assignment
-
-![Owner Assignment](images/csp-subscription-no-access/owner-assignment-successful.png)
-
----
-
 ## Lessons Learned
 
 Always verify customer permissions immediately after CSP subscription provisioning.
