@@ -71,15 +71,6 @@ Generate a new SSH key pair using the recommended ED25519 algorithm.
 ssh-keygen -t ed25519
 ```
 
-### Why ED25519?
-
-ED25519 is Microsoft's and OpenSSH's recommended algorithm because it provides:
-
-- High security
-- Small key size
-- Fast authentication
-- Broad compatibility with modern systems
-
 ---
 
 ## Step 3 – Choose the Storage Location
