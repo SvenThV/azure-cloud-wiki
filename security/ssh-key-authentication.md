@@ -197,22 +197,6 @@ The fingerprint uniquely identifies the SSH key and can be used to verify that t
 
 ---
 
-# Directory Structure
-
-After successful generation, the `.ssh` directory should contain:
-
-```text
-C:\Users\<username>\.ssh
-├── id_ed25519
-└── id_ed25519.pub
-```
-
-📷 **Screenshot**
-
-Windows Explorer displaying the `.ssh` folder and both generated key files.
-
----
-
 # Security Best Practices
 
 - Never share your private key.
