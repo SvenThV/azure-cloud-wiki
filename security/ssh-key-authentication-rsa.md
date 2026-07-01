@@ -56,10 +56,6 @@ OpenSSH_for_Windows_9.x
 
 If the command is not recognized, install the **OpenSSH Client** from the Windows Optional Features.
 
-📷 **Screenshot**
-
-PowerShell showing the installed OpenSSH version.
-
 ---
 
 # Step 2 – Generate the RSA Key Pair
@@ -76,8 +72,6 @@ Explanation:
 - `-b 4096` creates a 4096-bit RSA key.
 
 The command starts the interactive key generation wizard.
-
-📷 **Screenshot**
 
 PowerShell running:
 
@@ -99,8 +93,6 @@ Enter file in which to save the key
 Press **Enter** to use the default location.
 
 Alternatively, specify another filename if multiple SSH keys are required.
-
-📷 **Screenshot**
 
 PowerShell prompting for the storage location.
 
@@ -128,8 +120,6 @@ Options:
 - Recommended for sensitive environments
 - Requires entering the passphrase whenever the key is used
 
-📷 **Screenshot**
-
 PowerShell prompting for the passphrase.
 
 ---
@@ -147,8 +137,6 @@ The key fingerprint is ...
 ```
 
 This confirms that the RSA key pair has been created successfully.
-
-📷 **Screenshot**
 
 Successful key generation.
 
@@ -193,8 +181,6 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQ...
 
 Only the **public key** should be shared with remote systems.
 
-📷 **Screenshot**
-
 PowerShell displaying the public key.
 
 ---
@@ -214,8 +200,6 @@ Example:
 ```
 
 Fingerprints are commonly used to compare SSH keys without exposing the complete public key.
-
-📷 **Screenshot**
 
 PowerShell displaying the fingerprint.
 
