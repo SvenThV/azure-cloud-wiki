@@ -149,11 +149,25 @@ Example:
 transfer
 ```
 
-![Local User Permissions](images/add-local-user-permissions.png)
+### Optional ACL Settings
+
+The **ACL** settings are only required for advanced scenarios that use **Azure Data Lake Storage Gen2 (HNS)** with POSIX-style access control.
+
+| Setting | Description |
+|---------|-------------|
+| **User ID (UID)** | Numeric identifier assigned to the local user. Used by POSIX ACLs to identify the file owner. |
+| **Group ID (GID)** | Numeric identifier for the user's primary group. Used when managing group-based permissions. |
+| **Allow ACL authorization** | Enables authorization based on Azure Data Lake Storage ACLs instead of relying only on the container permissions configured above. |
+
+> **Note**
+>
+> For most SFTP deployments, these settings can be left at their default values. Container permissions are sufficient for typical file transfer scenarios.
 
 > **Tip**
 >
 > Grant only the permissions required for the intended workload (Principle of Least Privilege).
+> For most SFTP users, assigning **Read**, **Create**, **Write**, **Delete** and **List** permissions is sufficient.
+> Configure ACLs only if your environment requires fine-grained, POSIX-style permissions within Azure Data Lake Storage Gen2.
 
 ---
 
