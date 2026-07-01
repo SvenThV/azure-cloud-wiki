@@ -147,17 +147,7 @@ Database
 
 The export is performed directly from the Business Central online environment into your Azure Storage Account.
 
----
-
-### Screenshot
-
-**Business Central Admin Center – Create Database Export**
-
-```text
-images/business-central-database-export-to-azure-storage/create-database-export-menu.png
-```
-
----
+![Create Database Export menu](images/create-database-export-menu.png
 
 ## Export History
 
@@ -173,15 +163,7 @@ The Export History displays information such as:
 
 This makes it easy to verify whether an export has completed successfully.
 
----
-
-### Screenshot
-
-**Export History**
-
-```text
-images/business-central-database-export-to-azure-storage/export-history.png
-```
+![Create Database Export dialog](images/create-database-export-dialog.png)
 
 # Step-by-Step Guide
 
@@ -247,17 +229,7 @@ Environments
 → Create database export
 ```
 
----
-
-### Screenshot
-
-**Business Central Admin Center – Create Database Export**
-
-```text
-images/business-central-database-export-to-azure-storage/create-database-export-menu.png
-```
-
----
+![Create Database Export menu](images/create-database-export-menu.png)
 
 ## Step 5 – Configure the Export
 
@@ -273,17 +245,7 @@ Required fields include:
 
 Verify all values before starting the export.
 
----
-
-### Screenshot
-
-**Create Database Export Wizard**
-
-```text
-images/business-central-database-export-to-azure-storage/create-database-export-dialog.png
-```
-
----
+![Create Database Export menu](images/create-database-export-menu.png)
 
 ## Step 6 – Start the Export
 
@@ -299,18 +261,6 @@ Depending on the database size, the export may take some time.
 >
 > Export duration depends on factors such as database size, system load and the Azure platform.
 
----
-
-### Screenshot
-
-**Database Export in Progress**
-
-```text
-images/business-central-database-export-to-azure-storage/export-running.png
-```
-
----
-
 ## Step 7 – Monitor Export Status
 
 After the export has been started, the current status can be viewed in the **Export History**.
@@ -324,15 +274,7 @@ Business Central Admin Center
 
 Verify that the export has completed successfully before downloading or processing the BACPAC file.
 
----
-
-### Screenshot
-
-**Export History**
-
-```text
-images/business-central-database-export-to-azure-storage/export-history.png
-```
+![Export History](images/export-history.png)
 
 # Export Automation
 
