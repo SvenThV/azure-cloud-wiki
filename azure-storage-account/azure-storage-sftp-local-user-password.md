@@ -123,7 +123,7 @@ Azure supports the following authentication methods:
 - SSH Public Key
 - Both methods simultaneously
 
-![Add Local User](images/add-local-user.png)
+![Add Local User](images/sftp-local-user-password.png)
 
 ---
 
@@ -210,7 +210,7 @@ Example:
 sasvenveittest01.sftpuser
 ```
 
-![Local User Overview](images/local-user-overview.png)
+![Local User Overview](images/sftp-local-user-created-password.png)
 
 ---
 
