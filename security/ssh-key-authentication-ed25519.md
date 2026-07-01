@@ -134,18 +134,11 @@ id_ed25519
 id_ed25519.pub
 ```
 
-Windows Explorer showing:
+![Generated SSH key files](images/ssh-key-files-ed25519.png)
 
-```text
-C:\Users\<username>\.ssh
-```
-
-containing:
-
-- `id_ed25519`
-- `id_ed25519.pub`
-
-![Generated SSH key files](images/ssh-key-files.png)
+> **Note**
+>
+> Depending on your Windows file associations, the `.pub` file may appear as a *Microsoft Publisher Document*. Despite the icon, it is an SSH public key and **not** a Publisher file.
 
 ---
 
