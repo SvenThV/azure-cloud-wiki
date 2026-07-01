@@ -133,7 +133,6 @@ Expected output:
 id_ed25519
 id_ed25519.pub
 ```
-![Generated SSH key files](images/ssh-key-files.png)
 
 Windows Explorer showing:
 
@@ -145,6 +144,8 @@ containing:
 
 - `id_ed25519`
 - `id_ed25519.pub`
+
+![Generated SSH key files](images/ssh-key-files.png)
 
 ---
 
