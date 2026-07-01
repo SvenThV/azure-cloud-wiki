@@ -15,6 +15,24 @@ SSH key authentication is generally considered more secure than password-based a
 
 ---
 
+## Why Use ED25519
+
+ED25519 is the recommended SSH key algorithm for modern systems.
+
+Advantages include:
+
+- Smaller key size
+- Faster key generation
+- Faster authentication
+- Strong modern cryptography
+- Supported by most current SSH implementations
+
+> **Note**
+>
+> Only use RSA when working with legacy systems that do not support ED25519.
+
+---
+
 ## Prerequisites
 
 Before generating an SSH key pair, ensure that:
