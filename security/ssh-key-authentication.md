@@ -133,8 +133,7 @@ Expected output:
 id_ed25519
 id_ed25519.pub
 ```
-
-📷 **Screenshot**
+![Generated SSH key files](images/ssh-key-files.png)
 
 Windows Explorer showing:
 
