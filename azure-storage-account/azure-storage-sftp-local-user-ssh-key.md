@@ -61,7 +61,7 @@ Under **Authentication methods**, enable:
 
 Leave **SSH Password** disabled if you only want to allow key-based authentication.
 
-![Configure local user](images/add-local-user-key-pair-1.png)
+![Configure local user](images/sftp-local-user-ssh-key.png)
 
 > **Note**
 >
@@ -101,7 +101,7 @@ Get-Content $HOME\.ssh\id_rsa.pub
 
 Copy the complete output and paste it into Azure.
 
-![Upload SSH public key](images/azure-edit-local-user-add-public-rsa-key.png)
+![Upload SSH public key](images/sftp-upload-public-key.png)
 
 > **Important**
 >
@@ -135,7 +135,7 @@ Example:
 transfer
 ```
 
-![Container permissions](images/add-local-user-key-pair-permission.png)
+![Container permissions](images/sftp-local-user-permissions.png)
 
 ### Optional ACL Settings
 
@@ -169,7 +169,7 @@ The **Authentication method** should display:
 SSH Key pair
 ```
 
-![Created local user](images/user-overview-key-pair.png)
+![Created local user](images/sftp-local-user-created.png)
 
 This confirms that the user has been successfully configured for SSH key authentication.
 
