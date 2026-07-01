@@ -10,9 +10,9 @@ RSA keys are still widely supported and are commonly used when working with **le
 
 ---
 
-## When to Use RSA
+## Why Use RSA
 
-RSA remains a good choice when compatibility is more important than using the newest cryptographic algorithm.
+RSA is primarily used for compatibility with legacy systems that do not support ED25519.
 
 Typical use cases include:
 
@@ -20,13 +20,10 @@ Typical use cases include:
 - Older network appliances
 - Embedded devices
 - Legacy SFTP servers
-- Systems that do not support ED25519
 
 > **Note**
 >
-> For modern environments, **ED25519** is generally recommended because it provides smaller keys, faster operations and stronger security.
->
-> If your system supports ED25519, consider using the **SSH Key Authentication (ED25519)** guide instead.
+> If your environment supports ED25519, it is generally recommended over RSA due to its smaller keys, faster operations and modern cryptographic design.
 
 ---
 
