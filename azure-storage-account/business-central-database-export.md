@@ -132,11 +132,11 @@ Before starting the export, ensure the following prerequisites are met:
 >
 > The SAS URI specifies where the exported **BACPAC** file will be stored within Azure Storage.
 
----
+# Step-by-Step Guide
 
-# Database Export
+## Step 1 – Open the Business Central Admin Center
 
-The export wizard is available directly within the **Business Central Admin Center**.
+Sign in to the **Business Central Admin Center**.
 
 Navigate to your **Production** environment and select:
 
@@ -145,25 +145,52 @@ Database
 → Create database export
 ```
 
-The export is performed directly from the Business Central online environment into your Azure Storage Account.
+The export wizard is available directly from the **Database** menu.
 
-![Create Database Export menu](images/create-database-export-menu.png
+![Create Database Export menu](images/create-database-export-menu.png)
 
-## Export History
+## Step 2 – Configure the Export
 
-Business Central provides an **Export History**, allowing administrators to monitor all export operations.
+Complete the export wizard by entering the required information.
 
-The Export History displays information such as:
+Required fields include:
 
-- Export status
-- Export date
-- Environment
-- Export file name
-- Progress
+| Field | Description |
+|-------|-------------|
+| File Name | Name of the exported BACPAC file |
+| SAS URI | Shared Access Signature created earlier |
+| Container Name | Blob Container within the Storage Account |
 
-This makes it easy to verify whether an export has completed successfully.
+Verify all values before starting the export.
 
 ![Create Database Export dialog](images/create-database-export-dialog.png)
+
+## Step 3 – Start the Export
+
+Select **Create** to start the export.
+
+Business Central will begin generating the BACPAC file and upload it directly to the configured Azure Storage Account.
+
+Depending on the database size, the export may take some time.
+
+> **Note**
+>
+> During internal testing, exporting a relatively small Business Central database required approximately **one hour**.
+
+## Step 4 – Monitor Export Status
+
+After the export has been started, the current status can be viewed in the **Export History**.
+
+Navigate to:
+
+```text
+Business Central Admin Center
+→ Export History
+```
+
+Verify that the export has completed successfully before downloading or processing the BACPAC file.
+
+![Export History](images/export-history.png)
 
 # Step-by-Step Guide
 
