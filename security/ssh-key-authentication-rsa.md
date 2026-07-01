@@ -1,4 +1,4 @@
-# SSH Key Authentication (RSA)
+# SSH Key Generation (RSA)
 
 ## Overview
 
