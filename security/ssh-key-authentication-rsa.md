@@ -37,6 +37,8 @@ Before generating an SSH key, ensure that:
 
 ---
 
+# Step-by-Step Guide
+
 # Step 1 – Verify OpenSSH Installation
 
 Open PowerShell and verify that OpenSSH is installed.
