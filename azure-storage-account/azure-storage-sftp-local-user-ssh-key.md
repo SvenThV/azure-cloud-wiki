@@ -61,7 +61,7 @@ Under **Authentication methods**, enable:
 
 Leave **SSH Password** disabled if you only want to allow key-based authentication.
 
-![Configure local user](images/sftp-local-user-ssh-key.png)
+![Configure local user](images/sftp-local-user-overview.png)
 
 > **Note**
 >
