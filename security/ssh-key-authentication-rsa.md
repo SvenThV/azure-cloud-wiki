@@ -72,12 +72,6 @@ Explanation:
 
 The command starts the interactive key generation wizard.
 
-PowerShell running:
-
-```powershell
-ssh-keygen -t rsa -b 4096
-```
-
 ---
 
 # Step 3 – Choose the Storage Location
@@ -92,8 +86,6 @@ Enter file in which to save the key
 Press **Enter** to use the default location.
 
 Alternatively, specify another filename if multiple SSH keys are required.
-
-PowerShell prompting for the storage location.
 
 ---
 
@@ -118,8 +110,6 @@ Options:
 - Additional protection
 - Recommended for sensitive environments
 - Requires entering the passphrase whenever the key is used
-
-PowerShell prompting for the passphrase.
 
 ---
 
@@ -180,8 +170,6 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQ...
 
 Only the **public key** should be shared with remote systems.
 
-PowerShell displaying the public key.
-
 ---
 
 # Step 8 – Display the Key Fingerprint (Optional)
@@ -199,8 +187,6 @@ Example:
 ```
 
 Fingerprints are commonly used to compare SSH keys without exposing the complete public key.
-
-PowerShell displaying the fingerprint.
 
 ---
 
