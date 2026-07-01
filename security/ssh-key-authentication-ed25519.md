@@ -1,4 +1,4 @@
-# SSH Key Generation on Windows using OpenSSH
+# SSH Key Generation (ED25519)
 
 ## Overview
 
