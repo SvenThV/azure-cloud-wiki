@@ -192,51 +192,6 @@ Verify that the export has completed successfully before downloading or processi
 
 ![Export History](images/export-history.png)
 
-## Step 5 – Configure the Export
-
-Complete the export wizard by entering the required information.
-
-Required fields include:
-
-| Field | Description |
-|-------|-------------|
-| File Name | Name of the exported BACPAC file |
-| SAS URI | Shared Access Signature created earlier |
-| Container Name | Blob Container within the Storage Account |
-
-Verify all values before starting the export.
-
-![Create Database Export menu](images/create-database-export-menu.png)
-
-## Step 6 – Start the Export
-
-Select **Create** to start the export.
-
-Business Central will begin generating the BACPAC file and upload it directly to the configured Azure Storage Account.
-
-Depending on the database size, the export may take some time.
-
-> **Note**
->
-> During internal testing, exporting a relatively small Business Central database required approximately **one hour**.
->
-> Export duration depends on factors such as database size, system load and the Azure platform.
-
-## Step 7 – Monitor Export Status
-
-After the export has been started, the current status can be viewed in the **Export History**.
-
-Navigate to:
-
-```text
-Business Central Admin Center
-→ Export History
-```
-
-Verify that the export has completed successfully before downloading or processing the BACPAC file.
-
-![Export History](images/export-history.png)
-
 # Export Automation
 
 Business Central also supports automating database exports through the **Business Central Admin Center API**.
