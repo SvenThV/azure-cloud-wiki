@@ -175,11 +175,91 @@ This confirms that the user has been successfully configured for SSH key authent
 
 ---
 
+## Step 6 – Configure WinSCP
+
+Open **WinSCP** and create a new SFTP connection.
+
+Configure the following settings:
+
+| Setting | Value |
+|---------|-------|
+| File protocol | `SFTP` |
+| Host name | `<storage-account-name>.blob.core.windows.net` |
+| Port number | `22` |
+| User name | Use the **username** contained in the Azure SFTP connection string (the part before `@`) |
+| Password | Leave empty |
+
+Example:
+
+| Setting | Value |
+|---------|-------|
+| Host name | `sasvenveittest01.blob.core.windows.net` |
+| User name | `sasvenveittest01.sftpuser` |
+
+![WinSCP Login](images/winscp-sftp-login-ssh-key.png)
+
+> **Note**
+>
+> The username used for authentication is the **username** contained in the Azure SFTP connection string (the part before `@`), **not** only the Local User name.
+
+---
+
+## Step 7 – Select the Private Key
+
+Select **Advanced...**.
+
+Navigate to:
+
+```text
+SSH
+→ Authentication
+```
+
+Under **Private key file**, browse to your private SSH key.
+
+If you generated your key using OpenSSH, WinSCP automatically offers to convert it into the required PuTTY (`.ppk`) format.
+
+Select the generated `.ppk` file and confirm the dialog.
+
+![WinSCP SSH Authentication](images/winscp-ssh-authentication-settings.png)
+
+> **Note**
+>
+> The private key always remains on your local computer.
+> Only the corresponding public key is uploaded to Azure Storage.
+
+## Step 8 – Connect to Azure Storage
+
+Return to the login dialog and select **Login**.
+
+If prompted, accept the server host key.
+
+After successful authentication, the Blob Container configured as the **Home Directory** is displayed.
+
+The SFTP connection is now ready for file transfers.
+
+---
+
+## Result
+
+You have successfully:
+
+- Created an Azure Storage SFTP Local User
+- Configured SSH key authentication
+- Uploaded an SSH public key
+- Assigned container permissions
+- Connected successfully to Azure Storage SFTP using WinSCP
+
+You can now securely upload and download files using SFTP and SSH key authentication.
+
+---
+
 # Security Best Practices
 
 - Upload only the **public key**.
-- Never disclose the private key.
+- Never disclose or share the private key.
 - Store the private key securely.
+- Protect the private key with a passphrase whenever possible.
 - Prefer **ED25519** for modern environments.
 - Use **RSA** only when compatibility with legacy systems is required.
 - Use separate SSH key pairs for different environments whenever possible.
@@ -192,9 +272,16 @@ This confirms that the user has been successfully configured for SSH key authent
 
 Verify that:
 
-- the correct public key has been uploaded
-- the corresponding private key is being used by the SSH client
-- the username matches the Azure Storage local user
+- the correct public key has been uploaded to the Local User
+- the corresponding private key is selected in WinSCP
+- the username is correct (the part before `@` in the Azure SFTP connection string)
+- the Host name matches the Azure Storage Account endpoint
+
+---
+
+## Private key cannot be selected
+
+If your private key is in the OpenSSH format, allow WinSCP to convert it automatically to the required PuTTY (`.ppk`) format.
 
 ---
 
@@ -204,13 +291,13 @@ Verify that:
 
 - the required container permissions have been assigned
 - the Home Directory points to the correct Blob Container
-- the uploaded public key matches the private key used for authentication
+- the uploaded public key matches the selected private key
 
 ---
 
 # Related Articles
 
 - Azure Storage Account – Configure SFTP
+- Azure Storage SFTP – Configure a Local User (Password Authentication)
 - SSH Key Generation (ED25519)
 - SSH Key Generation (RSA)
-- WinSCP – Connect using SSH Key Authentication
