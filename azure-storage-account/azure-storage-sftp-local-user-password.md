@@ -176,7 +176,7 @@ Configure the following settings:
 | File protocol | `SFTP` |
 | Host name | `<storage-account-name>.blob.core.windows.net` |
 | Port number | `22` |
-| User name | Use the **Connection string** shown in the Azure SFTP overview |
+| User name | Use the **username** from the Azure SFTP connection string (the part before `@`) |
 | Password | The password generated during Local User creation |
 
 Example:
@@ -184,7 +184,7 @@ Example:
 | Setting | Value |
 |---------|-------|
 | Host name | `sasvenveittest01.blob.core.windows.net` |
-| User name | `sasvenveittest01.sftpuser@sasvenveittest01.blob.core.windows.net` |
+| User name | `sasvenveittest01.sftpuser` |
 | Password | Generated Azure SFTP password |
 
 After entering the connection details, select **Login**.
