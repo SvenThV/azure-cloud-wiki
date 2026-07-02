@@ -30,6 +30,10 @@ Related articles:
 - SSH Key Generation (RSA)
 - Azure Storage Account – Configure SFTP
 
+> **Important**
+>
+> At the time of writing, Azure Storage SFTP supports **RSA** and **ECDSA** public keys for Local User authentication. Although the Azure portal allows uploading **ED25519** public keys, they are currently not supported for Azure Storage SFTP authentication and authentication will fail. If you plan to use Azure Storage SFTP, generate an **RSA (4096-bit)** key pair. :contentReference[oaicite:0]{index=0}
+
 ---
 
 # Step-by-Step Guide
