@@ -165,6 +165,36 @@ sasvenveittest01.sftpuser@sasvenveittest01.blob.core.windows.net
 
 ---
 
+## Step 6 – Connect using WinSCP
+
+Open **WinSCP** and create a new SFTP connection.
+
+Configure the following settings:
+
+| Setting | Value |
+|---------|-------|
+| File protocol | `SFTP` |
+| Host name | `<storage-account-name>.blob.core.windows.net` |
+| Port number | `22` |
+| User name | Use the **Connection string** shown in the Azure SFTP overview |
+| Password | The password generated during Local User creation |
+
+Example:
+
+| Setting | Value |
+|---------|-------|
+| Host name | `sasvenveittest01.blob.core.windows.net` |
+| User name | `sasvenveittest01.sftpuser@sasvenveittest01.blob.core.windows.net` |
+| Password | Generated Azure SFTP password |
+
+After entering the connection details, select **Login**.
+
+![WinSCP Password Login](images/winscp-sftp-login-password.png)
+
+> **Note**
+>
+> The username used for authentication is the **Connection string** displayed in Azure, **not** only the Local User name.
+
 # Next Steps
 
 The Local User has now been configured.
