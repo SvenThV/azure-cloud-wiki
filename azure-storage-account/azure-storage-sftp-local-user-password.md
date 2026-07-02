@@ -193,7 +193,7 @@ After entering the connection details, select **Login**.
 
 > **Note**
 >
-> The username used for authentication is the **Connection string** displayed in Azure, **not** only the Local User name.
+> The username used for authentication is the **username** shown in the Azure SFTP connection string (the part before `@`).
 
 # Next Steps
 
