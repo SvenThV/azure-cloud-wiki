@@ -107,7 +107,7 @@ Example:
 transfer
 ```
 
-![Local User Permissions](images/sftp-local-user-password-permissions.png)
+![Local User Permissions](images/sftp-local-user-permissions.png)
 
 ### Optional ACL Settings
 
